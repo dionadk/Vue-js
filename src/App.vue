@@ -1,16 +1,22 @@
 <template>
-  <div>
-
-    <todo-list v-bind:todos="todos"></todo-list>
+  <div id="app">
+    <h1 class="ui dividing centered header">Vue.js Todo App</h1>
+    <div class='ui three column centered grid'>
+      <div class='column'>
+        <todo-list v-bind:todos="todos"></todo-list>
+      </div>
+    </div>
   </div>
 </template>
 
 
 
 <script>
+// import sweetalert from 'sweetalert'
 import TodoList from './components/TodoList'
 
 export default {
+  name: 'app',
   components: {
     TodoList
   },
@@ -34,13 +40,3 @@ export default {
   }
 }
 </script>
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
