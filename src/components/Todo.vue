@@ -1,5 +1,6 @@
-<template>
+<!-- list all todos -->
 
+<template>
     <div class='ui centered card'>
       <div class='content' v-show="!isEditing">
         <div class='header'>
@@ -43,6 +44,8 @@
       </div>
     </div>
 </template>
+
+
 
 <script type="text/javascript">
 export default {
