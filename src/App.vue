@@ -1,8 +1,7 @@
 <template>
   <div>
-        // Render the TodoList component
-        // TodoList becomes
-    <todo-list></todo-list>
+
+    <todo-list v-bind:todos="todos"></todo-list>
   </div>
 </template>
 
@@ -13,7 +12,25 @@ import TodoList from './components/TodoList'
 
 export default {
   components: {
-  TodoList
+    TodoList
+  },
+
+  data () {
+    return {
+      todos: [{
+        title: 'Todo A',
+        project: 'Project A',
+        done: true
+      }, {
+        title: 'Todo B',
+        project: 'Project B',
+        done: false
+      }, {
+        title: 'Todo C',
+        project: 'Project C',
+        done: true
+      }]
+    }
   }
 }
 </script>
