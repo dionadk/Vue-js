@@ -12,6 +12,9 @@
           <span class='right floated edit icon' v-on:click="showForm">
             <i class='edit icon'></i>
           </span>
+          <span class='right floated trash icon' v-on:click="deleteTodo(todo)">
+            <i class='trash icon'></i>
+          </span>
         </div>
       </div>
       <!-- form for editing depending on true or false condition -->
@@ -32,7 +35,6 @@
           </div>
         </div>
       </div>
-
       <div class='ui bottom attached green basic button' v-show='!isEditing && todo.done' disabled>
         Completed
       </div>
@@ -56,6 +58,9 @@ export default {
     },
     hideForm () {
       this.isEditing = false
+    },
+    deleteTodo (todo) {
+      this.$emit('delete-todo', todo)
     }
   }
 }
