@@ -59,6 +59,9 @@ export default {
     hideForm () {
       this.isEditing = false
     },
+    completeTodo (todo) {
+      this.$emit('complete-todo', todo)
+    },
     deleteTodo (todo) {
       this.$emit('delete-todo', todo)
     }

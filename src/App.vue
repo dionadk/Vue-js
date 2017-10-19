@@ -4,6 +4,7 @@
     <div class='ui three column centered grid'>
       <div class='column'>
         <todo-list v-bind:todos="todos"></todo-list>
+        <create-todo v-on:create-todo="createTodo"></create-todo>
       </div>
     </div>
   </div>
@@ -14,13 +15,14 @@
 <script>
 // import sweetalert from 'sweetalert'
 import TodoList from './components/TodoList'
+import CreateTodo from './components/CreateTodo'
 
 export default {
   name: 'app',
   components: {
-    TodoList
+    TodoList,
+    CreateTodo
   },
-
   data () {
     return {
       todos: [{
@@ -36,6 +38,11 @@ export default {
         project: 'Project C',
         done: true
       }]
+    }
+  },
+  methods: {
+    CreateTodo (newTodo) {
+      this.todos.push(newTodo)
     }
   }
 }
