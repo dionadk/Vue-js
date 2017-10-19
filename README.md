@@ -11,6 +11,7 @@ npm run dev
 # alert messages
 npm install --save sweetalert
 
+### About Vue-js
 ## Why did you choose this subject?
  Its component based and similiar to react
 ## How were you first made aware of it?
